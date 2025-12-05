@@ -1,5 +1,6 @@
 import { DataSource } from "typeorm";
 import { Persona } from "../entities/persona";
+import { EleccionVigente } from "../entities/eleccion-vigente";
 
 console.log('AppDataSource', {
     type: 'postgres',
@@ -18,6 +19,7 @@ const AppDataSource = new DataSource({
     database: process.env.DATABASE_NAME,
     entities: [
         Persona,
+        EleccionVigente,
     ]
 });
 
