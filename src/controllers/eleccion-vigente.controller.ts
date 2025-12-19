@@ -4,6 +4,7 @@ import * as eleccionVigenteService from '../services/eleccion-vigente.service';
 
 export const listarEleccionesVigentes = async (req: Request, res: Response) => {
     try {
+        console.log('listarEleccionesVigentes');
        const eleccionesVigentes = await eleccionVigenteService.listarEleccionesVigentes();
         res.json(BaseResponse.success(eleccionesVigentes));
     } catch (error) {
